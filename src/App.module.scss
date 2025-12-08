@@ -1,0 +1,11 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 14px;
+}
