@@ -1,12 +1,10 @@
-import { useState } from "react";
 import { RiShoppingBag4Fill } from "react-icons/ri";
 import styles from "./Header.module.scss";
 import style from "../NavItem/NavItem.module.scss";
 import NavItem from "../NavItem/NavItem";
+import Dropdown from "../Dropdown/Dropdown";
 
 const Header = () => {
-  const [dropdown, setDropdown] = useState(false);
-
   return (
     <header>
       <div className={styles.Header}>
@@ -32,68 +30,67 @@ const Header = () => {
               Catering
             </NavItem>
 
-            <li
-              onMouseLeave={() => setDropdown(false)}
+            <Dropdown
+              label="Page"
               className={style.LinksItem}
+              pageClass={style.LinksItemPage}
+              menuClass={style.PageLinks}
             >
-              <a
-                onMouseEnter={() => setDropdown(true)}
-                className={style.LinksItemPage}
-                href="https://www.codecademy.com/catalog"
+              <NavItem
+                className={style.LinksItem}
+                href="https://foodrest.1onestrong.com/about/"
               >
-                Page
-              </a>
-              {dropdown && (
-                <ul
-                  onMouseLeave={() => setDropdown(false)}
-                  onMouseEnter={() => setDropdown(true)}
-                  className={style.PageLinks}
-                >
-                  <NavItem
-                    className={style.LinksItem}
-                    href="https://www.codecademy.com/learn"
-                  >
-                    About
-                  </NavItem>
-                  <NavItem
-                    className={style.LinksItem}
-                    href="https://www.codecademy.com/learn"
-                  >
-                    Location
-                  </NavItem>
-                  <NavItem
-                    className={style.LinksItem}
-                    href="https://www.codecademy.com/learn"
-                  >
-                    FAQ
-                  </NavItem>
-                  <NavItem
-                    className={style.LinksItem}
-                    href="https://www.codecademy.com/learn"
-                  >
-                    Our Team
-                  </NavItem>
-                  <NavItem
-                    className={style.LinksItem}
-                    href="https://www.codecademy.com/learn"
-                  >
-                    Carrers
-                  </NavItem>
-                  <NavItem
-                    className={style.LinksItem}
-                    href="https://www.codecademy.com/learn"
-                  >
-                    404
-                  </NavItem>
-                </ul>
-              )}
-            </li>
-            <NavItem
+                About
+              </NavItem>
+              <NavItem
+                className={style.LinksItem}
+                href="https://foodrest.1onestrong.com/about/"
+              >
+                Location
+              </NavItem>
+              <NavItem
+                className={style.LinksItem}
+                href="https://foodrest.1onestrong.com/about/"
+              >
+                FAQ
+              </NavItem>
+              <NavItem
+                className={style.LinksItem}
+                href="https://foodrest.1onestrong.com/about/"
+              >
+                Our Team
+              </NavItem>
+              <NavItem
+                className={style.LinksItem}
+                href="https://foodrest.1onestrong.com/about/"
+              >
+                Carrers
+              </NavItem>
+              <NavItem
+                className={style.LinksItem}
+                href="https://foodrest.1onestrong.com/about/"
+              >
+                404
+              </NavItem>
+            </Dropdown>
+            <Dropdown
               className={style.LinksItem}
-              href="https://www.codecademy.com/learn"
+              menuClass={style.PageLinks}
+              label="Blog"
             >
-              Blog
-            </NavItem>
+              <NavItem
+                className={style.LinksItem}
+                href="https://www.codecademy.com/learn"
+              >
+                Blog
+              </NavItem>
+              <NavItem
+                className={style.LinksItem}
+                href="https://www.codecademy.com/learn"
+              >
+                Single Post
+              </NavItem>
+            </Dropdown>
             <NavItem
               className={style.LinksItem}
               href="https://www.codecademy.com/learn"
