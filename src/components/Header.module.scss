@@ -11,23 +11,24 @@
 
 .Links {
   display: flex;
-  justify-content: space-between;
   list-style: none;
-  gap: 14px;
-  align-items: center;
 }
 
-.LinksItem a {
-  text-decoration-line: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: #02350d;
-  padding: 0px 15px 0px 15px;
-  transition: 0.3s;
+.LinksItem {
+  padding: 10px;
 
-  &:hover {
-    color: #a2a376;
+  a {
+    text-decoration-line: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #02350d;
+    padding: 0px 15px 0px 15px;
+    transition: 0.3s;
+
+    &:hover {
+      color: #a2a376;
+    }
   }
 }
 
@@ -42,6 +43,7 @@
   list-style: none;
   padding-inline-start: 0;
   padding: 10px;
+  border-radius: 12px;
 
   li {
     a {

@@ -21,7 +21,10 @@ const Header = () => {
               <a href="https://www.codecademy.com/catalog">Catering</a>
             </li>
 
-            <li className={styles.LinksItem}>
+            <li
+              onMouseLeave={() => setDropdown(false)}
+              className={styles.LinksItem}
+            >
               <a
                 onMouseEnter={() => setDropdown(true)}
                 className={styles.LinksItemPage}
@@ -32,6 +35,7 @@ const Header = () => {
               {dropdown && (
                 <ul
                   onMouseLeave={() => setDropdown(false)}
+                  onMouseEnter={() => setDropdown(true)}
                   className={styles.PageLinks}
                 >
                   <li>
