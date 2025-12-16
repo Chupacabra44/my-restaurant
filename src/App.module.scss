@@ -156,26 +156,6 @@ body {
   }
 }
 
-.MenuButtons {
-  display: flex;
-  justify-content: center;
-  margin: 50px;
-}
-
-.MenuButton {
-  background-color: transparent;
-  color: #2a5732;
-  border-style: none;
-  font-weight: 700;
-  font-size: large;
-  cursor: pointer;
-}
-
-.MinusVertical {
-  font-size: 36px;
-  color: #9ea676;
-}
-
 .BurgerContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
