@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "alt": "001",
+    "image": "/images/Foodrest-jpg-01.jpg"
+  },
+    {
+    "id": 2,
+    "alt": "002",
+    "image": "/images/Foodrest-jpg-02.jpg"
+  },
+    {
+    "id": 3,
+    "alt": "003",
+    "image": "/images/Foodrest-jpg-03.jpg"
+  },
+    {
+    "id": 4,
+    "alt": "004",
+    "image": "/images/Foodrest-jpg-04.jpg"
+  },
+    {
+    "id": 5,
+    "alt": "005",
+    "image": "/images/Foodrest-jpg-05.jpg"
+  },
+    {
+    "id": 6,
+    "alt": "006",
+    "image": "/images/Foodrest-jpg-06.jpg"
+  },
+    {
+    "id": 7,
+    "alt": "007",
+    "image": "/images/Foodrest-jpg-07.jpg"
+  }
+]
