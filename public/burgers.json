@@ -1,0 +1,50 @@
+[
+  {
+    "id": 8,
+    "alt": "001",
+    "image": "/images/menu-01.png",
+    "title": "Bacon Beast"
+  },
+    {
+    "id": 9,
+    "alt": "002",
+    "image": "/images/menu-02.png",
+    "title": "Avocado Bliss"
+  },
+    {
+    "id": 10,
+    "alt": "003",
+    "image": "/images/menu-03.png",
+    "title": "Chicken Meatballs"
+  },
+    {
+    "id": 11,
+    "alt": "004",
+    "image": "/images/menu-04.png",
+    "title": "Sweet & Spicy"
+  },
+    {
+    "id": 12,
+    "alt": "005",
+    "image": "/images/menu-05.png",
+    "title": "Truffle Royale"
+  },
+    {
+    "id": 13,
+    "alt": "006",
+    "image": "/images/menu-06.png",
+    "title": "The Classic Bite"
+  },
+    {
+    "id": 14,
+    "alt": "007",
+    "image": "/images/menu-07.png",
+    "title": "Firecracker Jalapeño"
+  },
+      {
+    "id": 15,
+    "alt": "007",
+    "image": "/images/menu-08.png",
+    "title": "Cheesy Lava Melt"
+  }
+]
