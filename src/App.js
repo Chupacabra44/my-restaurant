@@ -4,6 +4,7 @@ import FoodButtons from "./components/FoodButtons/FoodButtons";
 import styles from "./App.module.scss";
 import Catering from "./components/Catering/Catering";
 import CarouselReview from "./components/CarouselReview/CarouselReview";
+import AnimatedCounter from "./components/AnimatedCounter/AnimatedCounter";
 
 function App() {
   const [foodImages, setFoddImages] = useState([]);
@@ -165,6 +166,7 @@ function App() {
         </section>
         <section>
           <CarouselReview />
+          <AnimatedCounter />
         </section>
       </main>
     </>
