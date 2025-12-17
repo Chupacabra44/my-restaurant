@@ -1,0 +1,24 @@
+.CarouselContainer {
+  padding: 3rem 0;
+  background-color: #00340b;
+  color: #fff;
+  text-align: center;
+
+  .Comment {
+    font-size: 50px;
+    font-weight: 300;
+    padding: 2pc 20%;
+  }
+
+  .CommentName {
+    font-size: 28px;
+  }
+}
+
+.Star {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 22px;
+  color: #ffc402;
+}

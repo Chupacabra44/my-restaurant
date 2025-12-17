@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import FoodButtons from "./components/FoodButtons/FoodButtons";
 import styles from "./App.module.scss";
 import Catering from "./components/Catering/Catering";
+import CarouselReview from "./components/CarouselReview/CarouselReview";
 
 function App() {
   const [foodImages, setFoddImages] = useState([]);
@@ -161,6 +162,9 @@ function App() {
               <Catering key={cat.id} cat={cat} />
             ))}
           </div>
+        </section>
+        <section>
+          <CarouselReview />
         </section>
       </main>
     </>
