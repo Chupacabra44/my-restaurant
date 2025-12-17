@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import FoodButtons from "./components/FoodButtons/FoodButtons";
-import { FaArrowRight } from "react-icons/fa6";
 import styles from "./App.module.scss";
+import Catering from "./components/Catering/Catering";
 
 function App() {
   const [foodImages, setFoddImages] = useState([]);
   const [burgers, setBurgers] = useState([]);
   const [breakfast, setBreakfast] = useState([]);
+  const [catering, setCatering] = useState([]);
   const [isActive, setIsActive] = useState("burgers");
 
   useEffect(() => {
@@ -16,17 +17,25 @@ function App() {
         const response = await fetch("foodImages.json");
         const responseSecond = await fetch("burgers.json");
         const responseThird = await fetch("breakfast.json");
-        if (!response.ok) {
+        const responseFourth = await fetch("catering.json");
+        if (
+          !response.ok ||
+          !responseSecond.ok ||
+          !responseThird.ok ||
+          !responseFourth.ok
+        ) {
           throw new Error("No image!");
         }
 
         const data = await response.json();
         const dataSecond = await responseSecond.json();
         const dataThird = await responseThird.json();
-        console.log(dataThird);
+        const dataFourth = await responseFourth.json();
+        console.log(dataFourth);
         setFoddImages(data);
         setBurgers(dataSecond);
         setBreakfast(dataThird);
+        setCatering(dataFourth);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -147,34 +156,10 @@ function App() {
                 more.
               </p>
             </div>
-            <div className={styles.CateringCircleImg}>
-              <img src="/images/Foodrest-jpg-010.jpg" alt="" />
-              <h4>Graduations</h4>
-              <a className={styles.CateringLink} href="/">
-                Contact us <FaArrowRight />
-              </a>
-            </div>
-            <div className={styles.CateringCircleImg}>
-              <img src="/images/Foodrest-jpg-011.jpg" alt="" />
-              <h4>Graduations</h4>
-              <a className={styles.CateringLink} href="/">
-                Contact us <FaArrowRight />
-              </a>
-            </div>
-            <div className={styles.CateringCircleImg}>
-              <img src="/images/Foodrest-jpg-012.jpg" alt="" />
-              <h4>Graduations</h4>
-              <a className={styles.CateringLink} href="/">
-                Contact us <FaArrowRight />
-              </a>
-            </div>
-            <div className={styles.CateringCircleImg}>
-              <img src="/images/Foodrest-jpg-013.jpg" alt="" />
-              <h4>Graduations</h4>
-              <a className={styles.CateringLink} href="/">
-                Contact us <FaArrowRight />
-              </a>
-            </div>
+
+            {catering.map((cat) => (
+              <Catering key={cat.id} cat={cat} />
+            ))}
           </div>
         </section>
       </main>
