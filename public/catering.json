@@ -1,0 +1,26 @@
+[
+  {
+    "id": 24,
+    "alt": "007",
+    "image": "/images/Foodrest-jpg-010.jpg",
+    "title": "Graduations"
+  },
+        {
+    "id": 25,
+    "alt": "007",
+    "image": "/images/Foodrest-jpg-011.jpg",
+    "title": "Banquets"
+  },
+        {
+    "id": 26,
+    "alt": "007",
+    "image": "/images/Foodrest-jpg-012.jpg",
+    "title": "Weddings"
+  },
+        {
+    "id": 27,
+    "alt": "007",
+    "image": "/images/Foodrest-jpg-013.jpg",
+    "title": "Private parties"
+  }
+]

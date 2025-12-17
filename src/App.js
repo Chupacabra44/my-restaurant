@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import FoodButtons from "./components/FoodButtons/FoodButtons";
+import { FaArrowRight } from "react-icons/fa6";
 import styles from "./App.module.scss";
 
 function App() {
@@ -63,7 +64,7 @@ function App() {
           style={{
             marginTop: "150px",
             background: "#fff3e8",
-            padding: "50px 0",
+            padding: "100px 0",
           }}
         >
           <div className={styles.ShapeContainer}>
@@ -73,7 +74,7 @@ function App() {
               alt="Shape"
             />
             <div className={styles.Centered}>
-              <h3>Our Menu</h3>
+              <h2>Our Menu</h2>
             </div>
           </div>
 
@@ -114,6 +115,67 @@ function App() {
               ))}
             </div>
           )}
+        </section>
+        <section className={styles.Catering}>
+          <h2>
+            Enjoy our delicious <br /> burgers together.
+          </h2>
+
+          <div className={styles.CateringImgContainer}>
+            <div>
+              <img
+                className={styles.Test}
+                src="/images/Foodrest-jpg-08.jpg"
+                alt="Foodrest8"
+              />
+            </div>
+            <div>
+              <img
+                className={styles.Test2}
+                src="/images/Foodrest-jpg-09.jpg"
+                alt="Foodrest9"
+              />
+            </div>
+          </div>
+
+          <div className={styles.CateringCircle}>
+            <div>
+              <h2>Catering</h2>
+              <p>
+                We offer reasonable pricing, great service, <br /> and a wide
+                variety of cuisines – <br /> appetizers, meats seafoods, and
+                more.
+              </p>
+            </div>
+            <div className={styles.CateringCircleImg}>
+              <img src="/images/Foodrest-jpg-010.jpg" alt="" />
+              <h4>Graduations</h4>
+              <a className={styles.CateringLink} href="/">
+                Contact us <FaArrowRight />
+              </a>
+            </div>
+            <div className={styles.CateringCircleImg}>
+              <img src="/images/Foodrest-jpg-011.jpg" alt="" />
+              <h4>Graduations</h4>
+              <a className={styles.CateringLink} href="/">
+                Contact us <FaArrowRight />
+              </a>
+            </div>
+            <div className={styles.CateringCircleImg}>
+              <img src="/images/Foodrest-jpg-012.jpg" alt="" />
+              <h4>Graduations</h4>
+              <a className={styles.CateringLink} href="/">
+                Contact us <FaArrowRight />
+              </a>
+            </div>
+            <div className={styles.CateringCircleImg}>
+              <img src="/images/Foodrest-jpg-013.jpg" alt="" />
+              <h4>Graduations</h4>
+              <a className={styles.CateringLink} href="/">
+                Contact us <FaArrowRight />
+              </a>
+            </div>
+          </div>
         </section>
       </main>
     </>
