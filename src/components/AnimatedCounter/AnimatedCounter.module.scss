@@ -1,5 +1,25 @@
 .Counter {
-  font-size: 44px;
-  text-align: center;
-  padding: 2pc 20%;
+  background-color: #fff9f4;
+  border-radius: 18px;
+}
+
+.CounterText {
+  color: #5d5d5d;
+  font-size: 12px;
+  width: 280px;
+}
+
+.CounterNumber {
+  font-size: 68px;
+  font-weight: bold;
+  padding: 40px;
+  color: #00340b;
+}
+
+.CounterTextSmall {
+  min-height: 48px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 20px;
+  text-align: left;
 }

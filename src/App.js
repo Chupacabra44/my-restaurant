@@ -164,9 +164,33 @@ function App() {
             ))}
           </div>
         </section>
-        <section>
+        <section className={styles.CarouselContainer}>
           <CarouselReview />
-          <AnimatedCounter />
+          <hr />
+          <div className={styles.CounterContainer}>
+            <AnimatedCounter
+              end={20}
+              textBold={"Years in Business "}
+              textNormal={"Years of Culinary Excellence"}
+            />
+            <AnimatedCounter
+              end={105}
+              textBold={"Events Catered "}
+              textNormal={"Successful Events Catered"}
+            />
+            <AnimatedCounter
+              end={91}
+              label={"K"}
+              textBold={"Catering Orders Delivered  "}
+              textNormal={"Catering Orders Completed"}
+              breakWord
+            />
+            <AnimatedCounter
+              end={5}
+              textBold={"Branches "}
+              textNormal={"Locations and Growing"}
+            />
+          </div>
         </section>
       </main>
     </>

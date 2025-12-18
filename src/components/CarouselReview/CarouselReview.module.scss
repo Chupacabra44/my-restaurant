@@ -1,10 +1,5 @@
 .CarouselContainer {
-  padding: 3rem 0;
-  background-color: #00340b;
-  color: #fff;
-  text-align: center;
-
-  .Comment {
+  & .Comment {
     font-size: 50px;
     font-weight: 300;
     padding: 2pc 20%;

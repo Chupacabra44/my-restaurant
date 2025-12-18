@@ -1,7 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./AnimatedCounter.module.scss";
 
-const AnimatedCounter = () => {
+const AnimatedCounter = ({
+  end,
+  label,
+  textBold,
+  textNormal,
+  breakWord = false,
+}) => {
   const [count, setCount] = useState(1);
   const [started, setStarted] = useState(false);
 
@@ -25,7 +31,6 @@ const AnimatedCounter = () => {
   useEffect(() => {
     if (!started) return;
 
-    const end = 50;
     const duration = 1000;
     const stepTime = Math.max(duration / end, 20);
 
@@ -39,11 +44,20 @@ const AnimatedCounter = () => {
     }, stepTime);
 
     return () => clearInterval(timer);
-  }, [started]);
+  }, [started, end]);
 
   return (
     <div className={styles.Counter} ref={ref}>
-      {count}
+      <div className={styles.CounterText}>
+        <p className={styles.CounterTextSmall}>
+          <strong>{textBold}</strong>
+          {breakWord && <br />}
+          <span>{textNormal}</span>
+        </p>
+        <div className={styles.CounterNumber}>
+          {count} {label}+
+        </div>
+      </div>
     </div>
   );
 };

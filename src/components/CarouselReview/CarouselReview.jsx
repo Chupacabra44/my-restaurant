@@ -75,10 +75,10 @@ const CarouselReview = () => {
         draggable={true}
         showDots={true}
         infinite={true}
-        // autoPlay={true}
-        // autoPlaySpeed={4000}
+        autoPlay={true}
+        autoPlaySpeed={10000}
         keyBoardControl={true}
-        transitionDuration={500}
+        transitionDuration={1000}
         arrows={false}
         dotListClass={styles.CustomDots}
       >

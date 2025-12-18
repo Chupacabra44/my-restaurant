@@ -236,3 +236,21 @@ body {
     color: #888785;
   }
 }
+
+.CarouselContainer {
+  padding: 3rem 0;
+  background-color: #00340b;
+  color: #fff;
+  text-align: center;
+}
+
+hr {
+  border-bottom: 1px solid #dddeb3;
+  margin: 4pc 10%;
+}
+
+.CounterContainer {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+}
