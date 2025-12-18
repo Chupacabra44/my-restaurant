@@ -5,6 +5,7 @@ import styles from "./App.module.scss";
 import Catering from "./components/Catering/Catering";
 import CarouselReview from "./components/CarouselReview/CarouselReview";
 import AnimatedCounter from "./components/AnimatedCounter/AnimatedCounter";
+import { IoIosArrowDown } from "react-icons/io";
 
 function App() {
   const [foodImages, setFoddImages] = useState([]);
@@ -12,6 +13,7 @@ function App() {
   const [breakfast, setBreakfast] = useState([]);
   const [catering, setCatering] = useState([]);
   const [isActive, setIsActive] = useState("burgers");
+  const [openAccordion, setOpenAccordion] = useState(false);
 
   useEffect(() => {
     async function fetchImages() {
@@ -190,6 +192,22 @@ function App() {
               textBold={"Branches "}
               textNormal={"Locations and Growing"}
             />
+          </div>
+        </section>
+        <section className={styles.Accordion}>
+          <div className={styles.Dashed}>
+            <span>FAQ Questions</span>
+          </div>
+          <h3 className={styles.AccordionTitle}>We’re Here to Help</h3>
+          <div className={styles.AccordionContainer}>
+            <div className={styles.AccordionWrapper}>
+              <button>What is FoodRest known for?</button>
+              <IoIosArrowDown />
+            </div>
+            <div className={styles.AccordionWrapper}>
+              <button>What is FoodRest known for?</button>
+              <IoIosArrowDown />
+            </div>
           </div>
         </section>
       </main>

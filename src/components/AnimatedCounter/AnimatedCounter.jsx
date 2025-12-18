@@ -55,7 +55,8 @@ const AnimatedCounter = ({
           <span>{textNormal}</span>
         </p>
         <div className={styles.CounterNumber}>
-          {count} {label}+
+          {count} {label}
+          <span className={styles.Plus}>+</span>
         </div>
       </div>
     </div>
