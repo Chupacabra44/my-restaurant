@@ -8,6 +8,7 @@ import AnimatedCounter from "./components/AnimatedCounter/AnimatedCounter";
 import Accordion from "./components/Accordion/Accordion";
 import AccordionTabs from "./components/AccordionTabs/AccordionTabs";
 import faq from "./faq.js";
+import Partners from "./components/Partners/Partners.jsx";
 
 function App() {
   const [foodImages, setFoddImages] = useState([]);
@@ -225,6 +226,7 @@ function App() {
             </div>
           )}
         </section>
+        <Partners />
       </main>
     </>
   );
