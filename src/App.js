@@ -13,7 +13,7 @@ function App() {
   const [breakfast, setBreakfast] = useState([]);
   const [catering, setCatering] = useState([]);
   const [isActive, setIsActive] = useState("burgers");
-  const [openAccordion, setOpenAccordion] = useState(false);
+  const [openIndex, setOpenIndex] = useState(null);
 
   useEffect(() => {
     async function fetchImages() {
@@ -46,6 +46,10 @@ function App() {
     }
     fetchImages();
   }, []);
+
+  const handleToggle = (index) => {
+    setOpenIndex((prev) => (prev === index ? null : index));
+  };
 
   return (
     <>
@@ -199,7 +203,38 @@ function App() {
             <span>FAQ Questions</span>
           </div>
           <h3 className={styles.AccordionTitle}>We’re Here to Help</h3>
-          <Accordion />
+          <Accordion
+            accordionHeaderText={"What is FoodRest known for?"}
+            accordionContentText={
+              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur."
+            }
+            isOpen={openIndex === 0}
+            onToggle={() => handleToggle(0)}
+          />
+          <Accordion
+            accordionHeaderText={"Do you offer dine-in, takeout, and delivery?"}
+            accordionContentText={
+              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur."
+            }
+            isOpen={openIndex === 1}
+            onToggle={() => handleToggle(1)}
+          />
+          <Accordion
+            accordionHeaderText={"What are your hours of operation?"}
+            accordionContentText={
+              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur."
+            }
+            isOpen={openIndex === 2}
+            onToggle={() => handleToggle(2)}
+          />
+          <Accordion
+            accordionHeaderText={"Do you accommodate dietary restrictions?"}
+            accordionContentText={
+              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur."
+            }
+            isOpen={openIndex === 3}
+            onToggle={() => handleToggle(3)}
+          />
         </section>
       </main>
     </>

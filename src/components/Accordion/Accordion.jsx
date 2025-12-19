@@ -2,37 +2,32 @@ import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import styles from "./Accordion.module.scss";
 
-const Accordion = () => {
-  const [accordion, setAccordion] = useState(false);
-  const [isDown, setIsDown] = useState(false);
-
-  const handleAccordion = () => {
-    setAccordion((prev) => !prev);
-    setIsDown((prev) => !prev);
-  };
-
+const Accordion = ({
+  accordionHeaderText,
+  accordionContentText,
+  isOpen,
+  onToggle,
+}) => {
   return (
     <div className={styles.AccordionItem}>
       <div className={styles.AccordionButton}>
         <button
-          onClick={handleAccordion}
+          onClick={onToggle}
           className={`${styles.AccordionHeader} ${
-            accordion ? styles.ColorChange : ""
+            isOpen ? styles.ColorChange : ""
           }`}
         >
-          What is FoodRest known for?
+          {accordionHeaderText}
         </button>
         <IoIosArrowDown
           className={`${styles.AccordionIcon} ${
-            isDown ? styles.IconRotate : ""
+            isOpen ? styles.IconRotate : ""
           }`}
         />
       </div>
-      {accordion && (
+      {isOpen && (
         <div className={styles.AccordionContent}>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur.
+          <p style={{ padding: "0 14px 0 14px" }}>{accordionContentText}</p>
         </div>
       )}
     </div>
