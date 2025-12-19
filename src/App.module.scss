@@ -285,3 +285,19 @@ hr {
   border-style: dashed;
   margin: 0 6px 0 6px;
 }
+
+.FadeIn {
+  animation-name: fadeInBottom;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+  }
+}

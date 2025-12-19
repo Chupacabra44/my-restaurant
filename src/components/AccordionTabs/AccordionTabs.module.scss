@@ -1,0 +1,22 @@
+.AccordionTabs {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.AccordionTab {
+  background-color: transparent;
+  color: #2e2d2b;
+  border-style: none;
+  border-bottom: 1px solid #b4b992;
+  line-height: 2;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    color: #ffb63b;
+    border-bottom: 1px solid #ffb63b;
+  }
+}
