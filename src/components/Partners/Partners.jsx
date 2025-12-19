@@ -34,8 +34,8 @@ const Partners = () => {
         Collaborated with over 800+ trusted worldwide partners
       </h3>
       <div className={styles.PartnerBoxes}>
-        {partners.map((partner) => (
-          <div>
+        {partners.map((partner, index) => (
+          <div key={index}>
             <img
               className={styles.PartnerBox}
               src={partner.img}

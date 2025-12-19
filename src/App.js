@@ -9,6 +9,7 @@ import Accordion from "./components/Accordion/Accordion";
 import AccordionTabs from "./components/AccordionTabs/AccordionTabs";
 import faq from "./faq.js";
 import Partners from "./components/Partners/Partners.jsx";
+import FoodImages from "./components/FoodImages/FoodImages.jsx";
 
 function App() {
   const [foodImages, setFoddImages] = useState([]);
@@ -60,7 +61,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className={styles.Main}>
+      <main>
         <h1 className={styles.h1}>
           <span>SIZZLING BURGERS,</span>
           <br />
@@ -71,16 +72,7 @@ function App() {
           <a href="tel:+8888075000">(888) 807-5000</a>
         </div>
         <section style={{ marginTop: "150px", height: "100vh" }}>
-          <div className={styles.imageGrid}>
-            {foodImages.map((image) => (
-              <img
-                key={image.id}
-                className={`${styles.imageItem} ${styles.slideUp}`}
-                src={image.image}
-                alt={image.alt}
-              />
-            ))}
-          </div>
+          <FoodImages foodImages={foodImages} />
         </section>
 
         <section

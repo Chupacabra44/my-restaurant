@@ -2,9 +2,6 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
-
-.Main {
   background-color: #fff9f4;
 }
 
@@ -53,82 +50,6 @@ body {
   }
 }
 
-.imageGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.imageItem {
-  flex: 0 0 calc(25% - 15px);
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 18px;
-  object-fit: cover;
-  object-position: left;
-
-  &:nth-child(1) {
-    rotate: 10deg;
-  }
-
-  &:nth-child(2) {
-    left: 100px;
-  }
-  &:nth-child(3) {
-    top: 400px;
-    left: 100px;
-    z-index: 10;
-  }
-  &:nth-child(4) {
-    right: 100px;
-    rotate: -15deg;
-  }
-  &:nth-child(5) {
-    left: 10px;
-    top: 100px;
-  }
-  &:nth-child(6) {
-    top: 150px;
-    left: 50px;
-  }
-  &:nth-child(7) {
-    left: 600px;
-    top: 100px;
-    z-index: 20;
-  }
-}
-
-.slideUp {
-  width: 100%;
-  max-width: 20%;
-  height: auto;
-  opacity: 0;
-  transform: translateY(100px);
-  animation: slideUpAnimation 1s ease-out forwards;
-}
-
-.slide-up:nth-child(1) {
-  animation-delay: 1s;
-}
-.slide-up:nth-child(2) {
-  animation-delay: 2s;
-}
-.slide-up:nth-child(3) {
-  animation-delay: 3s;
-}
-.slide-up:nth-child(4) {
-  animation-delay: 4s;
-}
-.slide-up:nth-child(5) {
-  animation-delay: 5s;
-}
-.slide-up:nth-child(6) {
-  animation-delay: 6s;
-}
-.slide-up:nth-child(7) {
-  animation-delay: 7s;
-}
-
 .ShapeContainer {
   position: relative;
   text-align: center;
@@ -171,17 +92,6 @@ body {
   color: #2a5732;
   font-weight: bold;
   font-size: 1.3rem;
-}
-
-@keyframes slideUpAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .Catering {
