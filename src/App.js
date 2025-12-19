@@ -7,6 +7,7 @@ import CarouselReview from "./components/CarouselReview/CarouselReview";
 import AnimatedCounter from "./components/AnimatedCounter/AnimatedCounter";
 import Accordion from "./components/Accordion/Accordion";
 import AccordionTabs from "./components/AccordionTabs/AccordionTabs";
+import faq from "./faq.js";
 
 function App() {
   const [foodImages, setFoddImages] = useState([]);
@@ -37,7 +38,7 @@ function App() {
         const dataSecond = await responseSecond.json();
         const dataThird = await responseThird.json();
         const dataFourth = await responseFourth.json();
-        console.log(dataFourth);
+
         setFoddImages(data);
         setBurgers(dataSecond);
         setBreakfast(dataThird);
@@ -210,81 +211,17 @@ function App() {
 
           <AccordionTabs setActiveTab={setActiveTab} />
 
-          {activeTab === "General Questions" && (
-            <div className={styles.FadeIn} key="General Questions">
-              <Accordion
-                accordionHeaderText={"What is FoodRest known for?"}
-                accordionContentText={
-                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur."
-                }
-                isOpen={openIndex === 0}
-                onToggle={() => handleToggle(0)}
-              />
-              <Accordion
-                accordionHeaderText={
-                  "Do you offer dine-in, takeout, and delivery?"
-                }
-                accordionContentText={
-                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur."
-                }
-                isOpen={openIndex === 1}
-                onToggle={() => handleToggle(1)}
-              />
-              <Accordion
-                accordionHeaderText={"What are your hours of operation?"}
-                accordionContentText={
-                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur."
-                }
-                isOpen={openIndex === 2}
-                onToggle={() => handleToggle(2)}
-              />
-              <Accordion
-                accordionHeaderText={"Do you accommodate dietary restrictions?"}
-                accordionContentText={
-                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur."
-                }
-                isOpen={openIndex === 3}
-                onToggle={() => handleToggle(3)}
-              />
-            </div>
-          )}
-
-          {activeTab === "Menu" && (
-            <div className={styles.FadeIn} key="Menu">
-              <Accordion
-                accordionHeaderText={"What cuisines do you offer?"}
-                accordionContentText={
-                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur."
-                }
-                isOpen={openIndex === 0}
-                onToggle={() => handleToggle(0)}
-              />
-              <Accordion
-                accordionHeaderText={"Do you have a kids' menu?"}
-                accordionContentText={
-                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur."
-                }
-                isOpen={openIndex === 1}
-                onToggle={() => handleToggle(1)}
-              />
-              <Accordion
-                accordionHeaderText={
-                  "Can I sample the food before booking catering?"
-                }
-                accordionContentText={
-                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur."
-                }
-                isOpen={openIndex === 2}
-                onToggle={() => handleToggle(2)}
-              />
-              <Accordion
-                accordionHeaderText={"Are your ingredients locally sourced?"}
-                accordionContentText={
-                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur."
-                }
-                isOpen={openIndex === 3}
-                onToggle={() => handleToggle(3)}
-              />
+          {faq[activeTab] && (
+            <div className={styles.FadeIn} key={activeTab}>
+              {faq[activeTab].map((item, index) => (
+                <Accordion
+                  key={index}
+                  accordionHeaderText={item.question}
+                  accordionContentText={item.answer}
+                  isOpen={openIndex === index}
+                  onToggle={() => handleToggle(index)}
+                />
+              ))}
             </div>
           )}
         </section>
