@@ -1,0 +1,45 @@
+.AccordionItem {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.AccordionButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.AccordionIcon {
+  position: absolute;
+  right: 14px;
+  color: #05380f;
+  font-size: 24px;
+}
+
+.IconRotate {
+  rotate: 180deg;
+  color: #fff;
+}
+
+.AccordionHeader {
+  width: 100%;
+  text-align: left;
+  color: #05380f;
+  font-size: 24px;
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.ColorChange {
+  background-color: #9ea676;
+  color: #fff;
+}
+
+.AccordionContent {
+  color: #676766;
+  padding: 14px;
+  line-height: 1.5;
+}

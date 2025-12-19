@@ -259,6 +259,13 @@ hr {
   padding: 100px 0;
 }
 
+.AccordionTitle {
+  text-align: center;
+  font-size: 60px;
+  text-shadow: -4px 3px 0px #9ea676;
+  color: #00340b;
+}
+
 .Dashed {
   display: flex;
   justify-content: center;
@@ -277,35 +284,4 @@ hr {
   border-block-start: 1px;
   border-style: dashed;
   margin: 0 6px 0 6px;
-}
-
-.AccordionTitle {
-  text-align: center;
-  font-size: 60px;
-  text-shadow: -4px 3px 0px #9ea676;
-  color: #00340b;
-}
-
-.AccordionContainer {
-}
-
-.AccordionWrapper {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid lightgrey;
-  width: 600px;
-  margin: 0 auto;
-  padding: 25px;
-  border-radius: 18px;
-  color: #05380f;
-  cursor: pointer;
-
-  button {
-    background-color: transparent;
-    border-style: none;
-  }
-}
-
-.Rotate {
-  font-size: 35px;
 }
