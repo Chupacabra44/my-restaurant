@@ -1,0 +1,43 @@
+.ShapeContainer {
+  position: relative;
+  text-align: center;
+  z-index: 30;
+}
+
+.Shape {
+  display: block;
+  margin: auto;
+  width: 30%;
+}
+
+.Centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+
+  h2 {
+    font-size: 60px;
+    text-shadow: -3px 0px #9ea676;
+  }
+}
+
+.BurgerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.Burger {
+  width: 250px;
+}
+
+.BurgerAndText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #2a5732;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
