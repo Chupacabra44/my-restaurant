@@ -140,9 +140,9 @@ const Form = () => {
           </button>
         </div>
         {submittedData && (
-          <div className={styles.SubmittedData}>
+          <div>
             <h3>Submitted Form Data:</h3>
-            <div className={styles.DataContainer}>
+            <div>
               <p>
                 <strong>First Name:</strong> {submittedData.firstName}
               </p>
