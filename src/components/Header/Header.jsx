@@ -36,10 +36,7 @@ const Header = () => {
               pageClass={style.LinksItemPage}
               menuClass={style.PageLinks}
             >
-              <NavItem
-                className={style.LinksItem}
-                href="https://foodrest.1onestrong.com/about/"
-              >
+              <NavItem className={style.LinksItem} to="/aboutus">
                 About
               </NavItem>
               <NavItem

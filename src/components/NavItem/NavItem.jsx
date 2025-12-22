@@ -1,9 +1,9 @@
-// import styles from "./NavItem.module.scss";
+import { Link } from "react-router-dom";
 
-const NavItem = ({ href, children, className, ...props }) => {
+const NavItem = ({ to, href, children, className, ...props }) => {
   return (
     <li className={className} {...props}>
-      <a href={href}>{children}</a>
+      <Link to={to}>{children}</Link>
     </li>
   );
 };
