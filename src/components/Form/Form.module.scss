@@ -1,0 +1,117 @@
+.FormSection {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+  gap: 30px;
+}
+
+.SectionLeft {
+  width: 50%;
+  h3 {
+    font-size: 64px;
+    text-shadow: -4px 2px 0px #000000;
+    color: #9ea676;
+    margin: 0;
+  }
+}
+
+.SectionRight {
+  width: 50%;
+}
+
+.Input {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  input {
+    flex: 1;
+    padding: 18px 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+
+    &::placeholder {
+      color: #2f5937;
+    }
+  }
+}
+
+.Textarea {
+  textarea {
+    width: 100%;
+    height: 100px;
+    padding: 18px 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+
+    &::placeholder {
+      color: #2f5937;
+    }
+  }
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 30px;
+  color: #fff;
+  background-color: #e34929;
+  padding: 18px 10px;
+  border-radius: 18px;
+  border-style: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ContactLeft,
+.ContactRight {
+  display: flex;
+}
+
+.Contact {
+  display: flex;
+  justify-content: space-around;
+  text-decoration-line: none;
+  color: #2a5732;
+  transition: 0.3s;
+  margin: 30px 0;
+}
+
+.Icon {
+  font-size: 2.5rem;
+  background-color: #2a5732;
+  color: #fff;
+  padding: 10px;
+  border-radius: 0.7rem;
+  margin-right: 1rem;
+}
+
+span {
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.ContactCenter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & span {
+    color: #2a5732;
+
+    &:first-child {
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+}
+
+iframe {
+  border: none;
+  border-radius: 18px;
+}

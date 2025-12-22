@@ -10,6 +10,7 @@ import faq from "./faq.js";
 import Partners from "./components/Partners/Partners.jsx";
 import FoodImages from "./components/FoodImages/FoodImages.jsx";
 import Menu from "./components/Menu/Menu.jsx";
+import Form from "./components/Form/Form.jsx";
 
 function App() {
   const [foodImages, setFoddImages] = useState([]);
@@ -169,6 +170,7 @@ function App() {
           )}
         </section>
         <Partners />
+        <Form />
       </main>
     </>
   );
