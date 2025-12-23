@@ -94,12 +94,14 @@
   margin-bottom: 60px;
 }
 
-.HistoryTabs a {
-  text-decoration: none;
+.HistoryTabs button {
+  cursor: pointer;
+  background-color: transparent;
   font-size: 15px;
   color: #cde3d3;
   position: relative;
   padding-bottom: 6px;
+  border: none;
   border-bottom: 2px solid #9ea676;
 
   &:hover {
@@ -107,7 +109,7 @@
   }
 }
 
-.HistoryTabs a.Active {
+.HistoryTabs button.Active {
   color: #f6b400;
 }
 
@@ -119,6 +121,7 @@
 }
 
 .HistoryImage img {
+  filter: grayscale(100%);
   width: 100%;
   border-radius: 16px;
   object-position: center;

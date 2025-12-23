@@ -1,8 +1,41 @@
 import { Link } from "react-router-dom";
 import styles from "./AboutUs.module.scss";
 import Catering from "../Catering/Catering";
+import { useState } from "react";
+
+const historyData = [
+  {
+    year: "2015 – 2017",
+    img: "/images/History-01.jpg",
+    alt: "History1",
+    text: [
+      "Humble Beginnings",
+      "FoodRest was founded in 2015 with a simple vision: to create a place where people could enjoy delicious, freshly prepared meals made with love. Starting as a small family-run restaurant.",
+    ],
+  },
+  {
+    year: "2018 – 2020",
+    img: "/images/History-02.jpg",
+    alt: "History2",
+    text: [
+      "Expanding Horizons",
+      "FoodRest was founded in 2015 with a simple vision: to create a place where people could enjoy delicious, freshly prepared meals made with love. Starting as a small family-run restaurant.",
+    ],
+  },
+  {
+    year: "2021 – 2024",
+    img: "/images/History-03.jpg",
+    alt: "History3",
+    text: [
+      "Culinary Excellence and Innovation",
+      "FoodRest was founded in 2015 with a simple vision: to create a place where people could enjoy delicious, freshly prepared meals made with love. Starting as a small family-run restaurant.",
+    ],
+  },
+];
 
 const AboutUs = ({ catering = [] }) => {
+  const [activeHistory, setActiveHistory] = useState(0);
+
   return (
     <>
       <section className={styles.About}>
@@ -43,26 +76,33 @@ const AboutUs = ({ catering = [] }) => {
         </div>
 
         <div className={styles.HistoryTabs}>
-          <a href="#" className={styles.Active}>
-            2015 – 2017
-          </a>
-          <a href="#">2018 – 2020</a>
-          <a href="#">2021 – 2024</a>
+          {historyData.map((item, index) => (
+            <button
+              key={item.year}
+              className={`${styles.HistoryTab} ${
+                activeHistory === index ? styles.Active : ""
+              }`}
+              onClick={() => setActiveHistory(index)}
+            >
+              {item.year}
+            </button>
+          ))}
         </div>
-
         <div className={styles.HistoryContent}>
           <div className={styles.HistoryImage}>
-            <img src="/images/History-01.jpg" alt="Restaurant beginnings" />
+            <img
+              src={historyData[activeHistory].img}
+              alt={historyData[activeHistory].alt}
+            />
           </div>
 
           <div className={styles.HistoryText}>
-            <span className={styles.HistoryYear}>2015 – 2017</span>
-            <h2>Humble Beginnings</h2>
-            <p>
-              FoodRest was founded in 2015 with a simple vision: to create a
-              place where people could enjoy delicious, freshly prepared meals
-              made with love. Starting as a small family-run restaurant.
-            </p>
+            <span className={styles.HistoryYear}>
+              {historyData[activeHistory].year}
+            </span>
+
+            <h2>{historyData[activeHistory].text[0]}</h2>
+            <p>{historyData[activeHistory].text[1]}</p>
           </div>
         </div>
       </section>

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import styles from "./Accordion.module.scss";
 
