@@ -11,10 +11,7 @@ const Header = () => {
         <img src="images/Logo-02.png" alt="Logo" />
         <nav>
           <ul className={styles.Links}>
-            <NavItem
-              className={style.LinksItem}
-              href="https://www.codecademy.com/learn"
-            >
+            <NavItem className={style.LinksItem} to="/">
               Home
             </NavItem>
             <NavItem
