@@ -1,4 +1,5 @@
 import { RiShoppingBag4Fill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
 import style from "../NavItem/NavItem.module.scss";
 import NavItem from "../NavItem/NavItem";
@@ -8,7 +9,10 @@ const Header = () => {
   return (
     <header>
       <div className={styles.Header}>
-        <img src="images/Logo-02.png" alt="Logo" />
+        <Link to="/">
+          <img src="images/Logo-02.png" alt="Logo" />
+        </Link>
+
         <nav>
           <ul className={styles.Links}>
             <NavItem className={style.LinksItem} to="/">

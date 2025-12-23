@@ -21,3 +21,29 @@
 .NotFoundText {
   color: #5d5d5d;
 }
+
+.Button {
+  background-color: #e34929;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: large;
+  border-color: #ffb128;
+  border-width: 0;
+  margin-top: 14px;
+
+  &:hover {
+    background-color: #2a5732;
+    border-color: #fff;
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    border-color: #ffb128;
+    fill: #fff;
+    font-weight: bold;
+  }
+}

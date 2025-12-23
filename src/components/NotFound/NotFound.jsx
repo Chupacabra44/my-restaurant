@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./NotFound.module.scss";
 
 const NotFound = () => {
@@ -19,7 +20,9 @@ const NotFound = () => {
         </p>
       </div>
       <div>
-        <button>Back To Home</button>
+        <button className={styles.Button}>
+          <Link to="/">Back To Home</Link>
+        </button>
       </div>
     </div>
   );
