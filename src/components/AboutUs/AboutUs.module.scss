@@ -1,0 +1,54 @@
+.About {
+  font-size: 78px;
+  text-align: center;
+  width: 100%;
+  height: 50vh;
+  background-color: #00340b;
+  color: #fff;
+  text-shadow: -4px 3px 0px #9ea676;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.AboutLinks {
+  display: flex;
+  font-size: 14px;
+  list-style: none;
+  text-shadow: none;
+}
+
+.AboutLink {
+  color: #7e8d60;
+  cursor: pointer;
+
+  a {
+    text-decoration-line: none;
+    color: #7e8d60;
+
+    &:hover {
+      color: #c69830;
+    }
+  }
+
+  &:not(:last-child) {
+    &::after {
+      content: "/";
+      margin: 0 14px;
+    }
+  }
+}
+
+.CustomShape {
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  width: 100%;
+  // overflow: hidden;
+  // line-height: 0;
+}
