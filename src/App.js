@@ -89,43 +89,7 @@ function App() {
                 burgers={burgers}
                 breakfast={breakfast}
               />
-              <section className={styles.Catering}>
-                <h2>
-                  Enjoy our delicious <br /> burgers together.
-                </h2>
-
-                <div className={styles.CateringImgContainer}>
-                  <div>
-                    <img
-                      className={styles.Test}
-                      src="/images/Foodrest-jpg-08.jpg"
-                      alt="Foodrest8"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      className={styles.Test2}
-                      src="/images/Foodrest-jpg-09.jpg"
-                      alt="Foodrest9"
-                    />
-                  </div>
-                </div>
-
-                <div className={styles.CateringCircle}>
-                  <div>
-                    <h2>Catering</h2>
-                    <p>
-                      We offer reasonable pricing, great service, <br /> and a
-                      wide variety of cuisines – <br /> appetizers, meats
-                      seafoods, and more.
-                    </p>
-                  </div>
-
-                  {catering.map((cat) => (
-                    <Catering key={cat.id} cat={cat} />
-                  ))}
-                </div>
-              </section>
+              <Catering catering={catering} />
               <section className={styles.CarouselContainer}>
                 <CarouselReview />
                 <hr />
@@ -181,7 +145,7 @@ function App() {
             </main>
           }
         />
-        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/aboutus" element={<AboutUs catering={catering} />} />
       </Routes>
       <Footer />
     </BrowserRouter>

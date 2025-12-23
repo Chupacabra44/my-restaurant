@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "./AboutUs.module.scss";
+import Catering from "../Catering/Catering";
 
-const AboutUs = () => {
+const AboutUs = ({ catering = [] }) => {
   return (
     <>
       <section className={styles.About}>
@@ -28,6 +29,7 @@ const AboutUs = () => {
           </svg>
         </div>
       </section>
+      <Catering catering={catering} />
     </>
   );
 };
