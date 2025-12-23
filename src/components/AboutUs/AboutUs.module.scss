@@ -49,11 +49,127 @@
 }
 
 .CustomShape {
-  // position: absolute;
-  // bottom: 0;
-  // width: 100%;
-  // min-height: 60vh;
   position: absolute;
   top: 340px;
   width: 100%;
+}
+
+// .History {
+//   display: flex;
+//   justify-content: center;
+//   background-color: #00340b;
+//   padding: 0 4%;
+
+//   & > div {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+
+//   h2,
+//   p {
+//     color: #fff;
+
+//     max-width: 600px;
+//   }
+// }
+
+// .HistoryAbout {
+//   display: flex;
+//   width: 100%;
+// }
+
+.History {
+  padding: 80px 100px;
+  background-color: #063b1e;
+  color: #eaf3ec;
+  font-family: "Poppins", sans-serif;
+}
+
+.HistoryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.HistoryHeader h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.HistoryHeader h1 span {
+  color: #f6b400;
+}
+
+.HistoryIntro {
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.HistoryTabs {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.HistoryTabs a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #cde3d3;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.HistoryTabs a.Active {
+  color: #f6b400;
+}
+
+.HistoryTabs a.Active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f6b400;
+}
+
+.HistoryContent {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.HistoryImage img {
+  width: 100%;
+  border-radius: 16px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.HistoryText .year {
+  font-size: 14px;
+  font-weight: 600;
+  color: #9fc8ac;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.HistoryText h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #f6b400;
+  margin-bottom: 20px;
+}
+
+.HistoryText p {
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 420px;
 }
