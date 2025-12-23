@@ -14,6 +14,7 @@ import Menu from "./components/Menu/Menu.jsx";
 import Form from "./components/Form/Form.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import AboutUs from "./components/AboutUs/AboutUs.jsx";
+import NotFound from "./components/NotFound/NotFound.jsx";
 
 function App() {
   const [foodImages, setFoddImages] = useState([]);
@@ -146,6 +147,7 @@ function App() {
           }
         />
         <Route path="/aboutus" element={<AboutUs catering={catering} />} />
+        <Route path="/notfound" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>

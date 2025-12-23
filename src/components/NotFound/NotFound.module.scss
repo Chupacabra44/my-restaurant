@@ -1,0 +1,23 @@
+.NotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 44px 0;
+}
+
+.NotFoundError {
+  color: #2a5732;
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.NotFoundOops {
+  color: #2a5732;
+  font-size: 44px;
+  font-weight: 900;
+}
+
+.NotFoundText {
+  color: #5d5d5d;
+}

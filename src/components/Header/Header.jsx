@@ -60,10 +60,7 @@ const Header = () => {
               >
                 Carrers
               </NavItem>
-              <NavItem
-                className={style.LinksItem}
-                href="https://foodrest.1onestrong.com/about/"
-              >
+              <NavItem className={style.LinksItem} to="/notfound">
                 404
               </NavItem>
             </Dropdown>
